@@ -1,4 +1,21 @@
 {
-    "$schema": "../../definitions/configuration.metadata.schema.json"
+    "$schema": "../../definitions/configuration.metadata.schema.json",
+    "overviewContent": "Some overview of the solution",
+    "pivots": [
+        {
+            "type": "AzureResource",
+            "azureResourceType": "Microsoft.Compute/virtualMachines",
+            "name": "vm"
+        },
+        {
+            "type": "Custom",
+            "displayName": "VM scale set",
+            "name": "vmss",
+            "icon": {
+                "iconType": "CustomIcon",
+                "iconFileName": "KeyVault"
+            }
+        }
+    ]
     
 }
