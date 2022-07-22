@@ -20,7 +20,7 @@
     "options": [
         {
             "id": "option1",
-            "displayName": "Vanilla VM",
+            "title": "Vanilla VM",
             "subTitle": "This deploys a basic vm",
             "pivotValues": [
                 {
