@@ -17,6 +17,12 @@
             }
         }
     ],
+    "associatedResources": [
+        {
+            "type": "AzureResource",
+            "resourceType": "Microsoft.KeyVault/vaults"
+        }
+    ],
     "options": [
         {
             "id": "option1",
