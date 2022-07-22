@@ -38,6 +38,27 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "option2",
+            "title": "VM with Zones",
+            "subTitle": "This deploys a basic vm with zones",
+            "pivotValues": [
+                {
+                    "pivotName": "vm",
+                    "content": [
+                        "deploys a B1s vm",
+                        "No Zones"
+                    ]
+                },
+                {
+                    "pivotName": "vmss",
+                    "content": [
+                        "deploys a B1s vmss",
+                        "2 Zones"
+                    ]
+                }
+            ]
         }
     ]
     
