@@ -16,6 +16,29 @@
                 "iconFileName": "KeyVault"
             }
         }
+    ],
+    "options": [
+        {
+            "id": "option1",
+            "displayName": "Vanilla VM",
+            "subTitle": "This deploys a basic vm",
+            "pivotValues": [
+                {
+                    "pivotName": "vm",
+                    "content": [
+                        "deploys a B1s vm",
+                        "No Zones"
+                    ]
+                },
+                {
+                    "pivotName": "vmss",
+                    "content": [
+                        "deploys a B1s vmss",
+                        "2 Zones"
+                    ]
+                }
+            ]
+        }
     ]
     
 }
