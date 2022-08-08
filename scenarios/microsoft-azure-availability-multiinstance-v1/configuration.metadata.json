@@ -1,0 +1,121 @@
+{
+    "$schema": "../../definitions/configuration.metadata.schema.json",
+    "overviewContent": "This solution works if you are looking to deploy multiple instances as part of your workload.",
+    "supportsManualConfiguration": true,
+    "pivots": [
+        {
+            "type": "Custom",
+            "displayName": "Availability",
+            "name": "availability",
+            "icon": {
+                "iconType": "CustomIcon",
+                "iconFileName": "ArcServer"
+            }
+        },
+        {
+            "type": "Custom",
+            "displayName": "Scalability",
+            "name": "scalability",
+            "icon": {
+                "iconType": "CustomIcon",
+                "iconFileName": "ArcServer"
+            }
+        }
+    ],
+    "associatedResources": [
+        {
+            "type": "AzureResource",
+            "resourceType": "microsoft.compute/virtualmachines"
+        }
+    ],
+    "options": [
+        {
+            "title": "Multiple VMs + Availability Zone",
+            "subTitle": "This option deploys multiple VM instances in multiple Zones ensuring highest availability.",
+            "id": "singleZonalVm",
+            "pivotValues": [
+                {
+                    "pivotName": "availability",
+                    "content": [
+                        "Highest availability due to backup instances supporting the workload",
+                    ]
+                },
+                {
+                    "pivotName": "scalability",
+                    "content": [
+                        "Not easily scalable",
+                        "Requires manually deploying additional instances to scale for traffic"
+                    ]
+                }
+            ],
+            "associatedResources": [
+                {
+                    "type": "AzureResource",
+                    "resourceType": "microsoft.compute/virtualmachines"
+                }
+            ]
+        },
+        {
+            "title": "Multiple VMs as a Scale set (Recommended)",
+            "subTitle": "This option deploys a virtual machine scale set which allows for easy scaling.",
+            "id": "singleFlexVmss",
+            "pivotValues": [
+                {
+                    "pivotName": "availability",
+                    "content": [
+                        "Highest reliability for all your instance",
+                        "Reduces latency"
+                    ]
+                },
+                {
+                    "pivotName": "scalability",
+                    "content": [
+                        "Easier to scale",
+                        "Azure creates new VM instances on demand."
+                    ]
+                }
+            ],
+            "associatedResources": [
+                {
+                    "type": "AzureResource",
+                    "resourceType": "microsoft.compute/virtualmachines"
+                },
+                {
+                    "type": "AzureResource",
+                    "resourceType": "microsoft.compute/virtualmachinescalesets"
+                }
+            ]
+        },
+        {
+            "title": "Single Vm + Availablbility Set (Legacy)",
+            "subTitle": "This option deploys a single VM to an existing or a new Availability Set. This is a legacy option and is not recommended for new workload deployments.",
+            "id": "singleAvSet",
+            "pivotValues": [
+                {
+                    "pivotName": "availability",
+                    "content": [
+                        "Lower reliability since VM instances are not in the saem zone"
+                        
+                    ]
+                },
+                {
+                    "pivotName": "scalability",
+                    "content": [
+                        "Not easily scalable",
+                        "Requires manually creating new instances and addition to Availability Set"
+                    ]
+                }
+            ],
+            "associatedResources": [
+                {
+                    "type": "AzureResource",
+                    "resourceType": "microsoft.compute/virtualmachines"
+                },
+                {
+                    "type": "AzureResource",
+                    "resourceType": "microsoft.compute/availabilitysets"
+                }
+            ]
+        }
+    ]
+}
