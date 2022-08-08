@@ -86,7 +86,7 @@
                 {
                     "pivotName": "availability",
                     "content": [
-                        "Lower reliability since VM instances are not in the saem zone",
+                        "Lower reliability since VM instances are not in the saem zone"
                         
                     ]
                 },
