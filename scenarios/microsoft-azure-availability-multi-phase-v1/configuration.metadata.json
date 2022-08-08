@@ -1,6 +1,7 @@
 {
     "$schema": "../../definitions/configuration.metadata.schema.json",
     "overviewContent": "This solution works if you are looking to deploy a single VM instance now, as part of multi-instance workload at a later time or if you already have some instances deployed and you are looking to add to the workload.",
+    "supportsManualConfiguration": true,
     "pivots": [
         {
             "type": "Custom",
