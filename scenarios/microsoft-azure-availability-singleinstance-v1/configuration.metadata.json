@@ -1,0 +1,63 @@
+{
+    "$schema": "../../definitions/configuration.metadata.schema.json",
+    "overviewContent": "This solution works if you are looking to deploy a single VM instance only without a plan to add more instances or scale it out later.",
+    "supportsManualConfiguration": true,
+    "pivots": [
+        {
+            "type": "Custom",
+            "displayName": "Availability",
+            "name": "availability",
+            "icon": {
+                "iconType": "CustomIcon",
+                "iconFileName": "ArcServer"
+            }
+        }
+    ],
+    "associatedResources": [
+        {
+            "type": "AzureResource",
+            "resourceType": "microsoft.compute/virtualmachines"
+        }
+    ],
+    "options": [
+        {
+            "title": "Single Vm + Availability Zone (Recommended)",
+            "subTitle": "This option deploys a single VM in an availability zone with no additional scaling options.",
+            "id": "singleZonalVm",
+            "pivotValues": [
+                {
+                    "pivotName": "availability",
+                    "content": [
+                        "Higher reliability due to supporting resources being deployed in the same zone",
+                        "Reduces latency"
+                    ]
+                }
+            ],
+            "associatedResources": [
+                {
+                    "type": "AzureResource",
+                    "resourceType": "microsoft.compute/virtualmachines"
+                }
+            ]
+        },
+        {
+            "title": "Single Vm without Zonal resiliency",
+            "subTitle": "This option deploys a single VM without any zonal resiliency",
+            "id": "singleFlexVmss",
+            "pivotValues": [
+                {
+                    "pivotName": "availability",
+                    "content": [
+                        "Lower resiliency due to resources being spread across zones"
+                    ]
+                }
+            ],
+            "associatedResources": [
+                {
+                    "type": "AzureResource",
+                    "resourceType": "microsoft.compute/virtualmachines"
+                }
+            ]
+        }
+    ]
+}
