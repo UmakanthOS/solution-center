@@ -4,7 +4,7 @@
     "pivots": [
         {
             "type": "Custom",
-            "displayName": "Availablbility",
+            "displayName": "Availability",
             "name": "availability",
             "icon": {
                 "iconType": "CustomIcon",
