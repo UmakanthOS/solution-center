@@ -5,12 +5,20 @@
         {
             "type": "Custom",
             "displayName": "Availablbility",
-            "name": "availability"
+            "name": "availability",
+            "icon": {
+                "iconType": "CustomIcon",
+                "iconFileName": "ArcServer"
+            }
         },
         {
             "type": "Custom",
             "displayName": "Scalability",
-            "name": "scalability"
+            "name": "scalability",
+            "icon": {
+                "iconType": "CustomIcon",
+                "iconFileName": "ArcServer"
+            }
         }
     ],
     "associatedResources": [
