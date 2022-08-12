@@ -1,11 +1,11 @@
 {
     "$schema": "../../definitions/configuration.metadata.schema.json",
-    "overviewContent": "",
+    "overviewContent": "This is a a demo solution.",
     "pivots": [
         {
-            "type": "Custom",
+            "type": "AzureResource",
             "name": "uniqueColumnName",
-            "displayName": "Unique Column Name"
+            "azureResourceType": "Microsoft.Compute/virtualMachines"
         }
     ],
     "configurations": [
@@ -37,15 +37,6 @@
         {
             "resourceType": "Microsoft.Compute/virtualMachines",
             "type": "AzureResource"
-        },
-        {
-            "resourceType": "",
-            "displayName": "Custom resource",
-            "type": "Custom",
-            "icon": {
-                "iconType": "CustomIcon",
-                "iconFileName": "MicrosoftDefender"
-            }
         }
     ]
 }

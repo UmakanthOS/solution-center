@@ -34,7 +34,7 @@ Configuration metadata is how your solution looks to others. It defines pricing,
          - iconFileName: enter the name of the file, typically uploaded to the `icons` directory
 - pivots: the differences between the configurations, choose a unique name and display name for each pivot
 - documentationFileName: a markdown file in the repository which helps with architecture diagrams and addditional resources for deployment (2nd tab of solution).
-- options: the details for each configuration.
+- configurations: the details for each configuration.
    - id: Vertical column unique ID.
    - title: Vertical column header 1.
    - templateFileName: The ARM JSON with parameters specified. This will auto-load a create flow once the user selects your configuration.
@@ -73,7 +73,7 @@ Discovery metadata is how you define your solution in a solution grouping page. 
 ![description-off-image](images/descriptions-off.png)
 
 #### **An example configuration with three pivots**
-See `pivots` and `options` in `configuration.metadata` for implementation
+See `pivots` and `configurations` in `configuration.metadata` for implementation
 ![configuration](images/configuration.png)
 
 ## How to submit a solution group
