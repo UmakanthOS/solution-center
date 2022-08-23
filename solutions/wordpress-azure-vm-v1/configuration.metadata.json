@@ -59,7 +59,7 @@
     "pivots": [
         {
             "name": "virtualMachineCompute",
-            "type": "Custom",
+            "type": "AzureResource",
             "displayName": "Compute Option",
             "icon": {
                 "iconType": "CustomIcon",
@@ -68,7 +68,7 @@
         },
         {
             "name": "vmssCompute",
-            "type": "Custom",
+            "type": "AzureResource",
             "displayName": "Compute Option",
             "icon": {
                 "iconType": "CustomIcon",
@@ -77,7 +77,7 @@
         },
         {
             "name": "storagePivot",
-            "type": "Custom",
+            "type": "AzureResource",
             "displayName": "Shared Network Storage",
             "icon": {
                 "iconType": "CustomIcon",
@@ -86,7 +86,7 @@
         },
         {
             "name": "cachingPivot",
-            "type": "Custom",
+            "type": "AzureResource",
             "displayName": "High performance Redis Cache",
             "icon": {
                 "iconType": "CustomIcon",
