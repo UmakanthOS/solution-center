@@ -60,38 +60,22 @@
         {
             "name": "virtualMachineCompute",
             "type": "AzureResource",
-            "displayName": "Compute Option",
-            "icon": {
-                "iconType": "CustomIcon",
-                "iconFileName": "virtualMachine"
-            }
+            "azureResourceType": "Microsoft.Compute/virtualMachines"
         },
         {
             "name": "vmssCompute",
             "type": "AzureResource",
-            "displayName": "Compute Option",
-            "icon": {
-                "iconType": "CustomIcon",
-                "iconFileName": "VMSS"
-            }
+            "azureResourceType": "Microsoft.Compute/virtualMachineScaleSets"
         },
         {
             "name": "storagePivot",
             "type": "AzureResource",
-            "displayName": "Shared Network Storage",
-            "icon": {
-                "iconType": "CustomIcon",
-                "iconFileName": "Storage"
-            }
+            "azureResourceType": "Microsoft.Compute/disks"
         },
         {
             "name": "cachingPivot",
             "type": "AzureResource",
-            "displayName": "High performance Redis Cache",
-            "icon": {
-                "iconType": "CustomIcon",
-                "iconFileName": "Redis"
-            }
+            "azureResourceType": "Microsoft.Cache/Redis"
         }
     ],
     "documentationFileName": null,
