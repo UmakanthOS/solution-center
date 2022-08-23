@@ -1,7 +1,6 @@
 {
     "$schema": "../../definitions/configuration.metadata.schema.json",
-    "overviewContent": "Deploy WordPress the easy way!",
-
+    "overviewContent": "Deploy and manage a highly available and scalable LAMP cluster on Azure. LAMP clusters deploy an empty infrastructure or stack for any general LAMP application. Once a LAMP cluster is deployed you can build a WordPress website on Linux.",
     "associatedResources": [
         {
             "resourceType": "Microsoft.Network/PublicIpAddresses",
@@ -83,13 +82,13 @@
             "azureResourceType": "Microsoft.DBforMySQL/flexibleServers"
         }
     ],
-    "documentationFileName": null,
+    "documentationFileName": "wordpress-overview.md",
     "configurations": [
         {
             "id": "Small",
-            "title": "A starter solution for dev/test scenarios",
+            "title": "2-core Dev-Test",
             "templateFileName": "azuredeploy.json",
-            "subTitle": "A very affordable way to get started...",
+            "subTitle": "Best for development or test scenarios where reliability and availability aren’t concerns.",
             "cost": {
                 "value": 150,
                 "score": 1,
@@ -105,16 +104,16 @@
                 {
                     "pivotName": "virtualMachineCompute",
                     "content": [
-                        "A single VM based solution without any scale option."
+                        "2-core D series VM based without any scale option."
                     ]
                 }
             ]
         },
         {
             "id": "Large",
-            "title": "A scalable deployment option with support for caching and fast shared storage!",
+            "title": "4-core Production",
             "templateFileName": "azuredeploy.json",
-            "subTitle": "A very affordable way to get started...",
+            "subTitle": "A scalable deployment option with support for caching and fast shared storage!",
             "cost": {
                 "value": 999,
                 "score": 2,
@@ -130,25 +129,26 @@
                 {
                     "pivotName": "vmssCompute",
                     "content": [
-                        "A scalable offering that utilizes virtual machine scale sets"
+                        "4-core D series virtual machine scale set",
+                        "Starts with 4 instances"
                     ]
                 },
                 {
                     "pivotName": "storagePivot",
                     "content": [
-                        "Azure Premium files as the responsive shared storage option"
+                        "Azure Premium files as the responsive shared storage option."
                     ]
                 },
                 {
                     "pivotName": "cachingPivot",
                     "content": [
-                        "Azure Cache for Redis for object/DB and static page caching"
+                        "Azure Cache for Redis for object/DB and static page caching."
                     ]
                 },
                 {
                     "pivotName": "DBforMySQL",
                     "content": [
-                        "Scalable managed MySQL that comes as a highly available offering"
+                        "Scalable managed MySQL that comes as a highly available offering."
                     ]
                 }
             ]
