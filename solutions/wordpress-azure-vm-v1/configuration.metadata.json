@@ -76,6 +76,11 @@
             "name": "cachingPivot",
             "type": "AzureResource",
             "azureResourceType": "Microsoft.Cache/Redis"
+        },
+        {
+            "name": "DBforMySQL",
+            "type": "AzureResource",
+            "azureResourceType": "Microsoft.DBforMySQL/flexibleServers"
         }
     ],
     "documentationFileName": null,
@@ -107,7 +112,7 @@
         },
         {
             "id": "Large",
-            "title": "A starter solution for dev/test scenarios",
+            "title": "A scalable deployment option with support for caching and fast shared storage!",
             "templateFileName": "azuredeploy.json",
             "subTitle": "A very affordable way to get started...",
             "cost": {
@@ -138,6 +143,12 @@
                     "pivotName": "cachingPivot",
                     "content": [
                         "Azure Cache for Redis for object/DB and static page caching"
+                    ]
+                },
+                {
+                    "pivotName": "DBforMySQL",
+                    "content": [
+                        "Scalable managed MySQL that comes as a highly available offering"
                     ]
                 }
             ]
