@@ -3,6 +3,6 @@
     "iconType": "AssetIcon",
     "asset": "Microsoft.Workloads/phpworkloads"
   },
-  "title": "WordPress website running on Linux",
-  "shortDescription": "Deploy and manage a highly available and scalable LAMP cluster on Azure. "
+  "title": "WordPress deployments on Linux",
+  "shortDescription": "Deploy and manage a highly available and scalable PHP cluster on Azure. "
 }
