@@ -53,6 +53,10 @@
         {
             "resourceType": "Microsoft.Storage/StorageAccounts",
             "type": "AzureResource"
+        },
+        {
+            "resourceType": "Microsoft.Network/LoadBalancers",
+            "type": "AzureResource"
         }
     ],
     "pivots": [
@@ -80,6 +84,16 @@
             "name": "DBforMySQL",
             "type": "AzureResource",
             "azureResourceType": "Microsoft.DBforMySQL/flexibleServers"
+        },
+        {
+            "name": "NetworkLB",
+            "type": "AzureResource",
+            "azureResourceType": "Microsoft.Network/LoadBalancers"
+        },
+        {
+            "name": "NetworkAppGw",
+            "type": "AzureResource",
+            "azureResourceType": "Microsoft.Network/applicationGateways"
         }
     ],
     "documentationFileName": "wordpress-overview.md",
@@ -105,6 +119,12 @@
                     "pivotName": "virtualMachineCompute",
                     "content": [
                         "2-core D series VM based without any scale option."
+                    ]
+                },
+                {
+                    "pivotName": "NetworkLB",
+                    "content": [
+                        "A Basic Load Balancer Equipped for small-scale applications that don't need high availability or redundancy. Not compatible with availability zones."
                     ]
                 }
             ]
@@ -149,6 +169,12 @@
                     "pivotName": "DBforMySQL",
                     "content": [
                         "Scalable managed MySQL that comes as a highly available offering."
+                    ]
+                },
+                {
+                    "pivotName": "NetworkAppGw",
+                    "content": [
+                        "An Application Gateway  is a web traffic load balancer that enables you to manage high volume traffic to your web applications."
                     ]
                 }
             ]
