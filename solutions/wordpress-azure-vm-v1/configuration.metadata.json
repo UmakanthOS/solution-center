@@ -100,7 +100,7 @@
     "configurations": [
         {
             "id": "Small",
-            "title": "2-core Dev-Test",
+            "title": "Single VM deployment for Dev-Test scenarios",
             "templateFileName": "azuredeploy.json",
             "subTitle": "Best for development or test scenarios where reliability and availability aren’t concerns.",
             "cost": {
@@ -131,7 +131,7 @@
         },
         {
             "id": "Large",
-            "title": "4-core Production",
+            "title": "4 core scaleset based deployment for production workloads",
             "templateFileName": "azuredeploy.json",
             "subTitle": "A scalable deployment option with support for caching and fast shared storage!",
             "cost": {
